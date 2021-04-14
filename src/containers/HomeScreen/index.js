@@ -9,12 +9,10 @@ const HomeScreen = (props) =>{
 	const [age, setAge] = useState('')
 	const [editId, setEditId] = useState('')
 	useEffect(() => {
-		fetchData()
+		props.fetchData()
+		// eslint-disable-next-line
 	},[]);
 
-	const fetchData = () =>{
-		props.fetchData()
-	}
 	const uploadUser= () =>{
 		props.uploadUser(name, age, editId);
 		clear();
