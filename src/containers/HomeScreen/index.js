@@ -9,8 +9,12 @@ const HomeScreen = (props) =>{
 	const [age, setAge] = useState('')
 	const [editId, setEditId] = useState('')
 	useEffect(() => {
-		props.fetchData();
+		fetchData()
 	},[]);
+
+	const fetchData = () =>{
+		props.fetchData()
+	}
 	const uploadUser= () =>{
 		props.uploadUser(name, age, editId);
 		clear();
